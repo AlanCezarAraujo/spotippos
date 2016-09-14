@@ -1,0 +1,16 @@
+html,
+body {
+  height: 100%;
+  background: var(--white);
+}
+
+main {
+  padding: 1em;
+  width: calc(100% - 125px);
+  height: var(--main-heigth);
+  margin-left: 125px;
+}
+
+main div {
+    height: 100%;
+}

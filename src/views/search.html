@@ -1,0 +1,100 @@
+<div class="filter-container col-md-3 col-sm-12">
+    <div class="card filter">
+        <fieldset>
+            <legend class="col-lg-12 col-md-12 col-sm-12">Filtro</legend>
+
+            <div class="col-md-6 col-xs-6">
+                <label for="txtFilterId" class="label">ID</label>
+                <input type="text" id="txtFilterId" name="txtFilterId" class="text" ng-model="vm.filter.id" />
+            </div>
+
+            <div class="col-md-6 col-xs-6">
+                <label for="txtFilterArea" class="label">Área</label>
+                <input type="number" id="txtFilterArea" name="txtFilterArea" class="text" min="1" max="200" ng-model="vm.filter.squareMeters" />
+            </div>
+
+            <hr />
+
+            <div class="col-md-6 col-xs-6">
+                <label for="txtFilterBeds" class="label">Quartos</label>
+                <input type="number" id="txtFilterBeds" name="txtFilterBeds" class="text" min="1" max="5" ng-model="vm.filter.beds" />
+            </div>
+
+            <div class="col-md-6 col-xs-6">
+                <label for="txtFilterBaths" class="label">Banheiros</label>
+                <input type="number" id="txtFilterBaths" name="txtFilterBaths" class="text" min="1" max="4" ng-model="vm.filter.baths" />
+            </div>
+
+            <hr />
+
+            <div class="col-md-6 col-xs-6">
+                <label for="txtFilterMinValue" class="label">Valor <span class="hidden">Mínimo</span></label>
+                <input type="text" id="txtFilterMinValue" name="txtFilterMinValue" class="text" placeholder="Mínimo" ng-model="vm.filter.minValue" />
+            </div>
+
+            <div class="col-md-6 col-xs-6">
+                <label for="txtFilterMinValue" class="label label__hidden">Valor Máximo</label>
+                <input type="text" id="txtFilterMinValue" name="txtFilterMinValue" class="text" placeholder="Máximo" ng-model="vm.filter.maxValue" />
+            </div>
+        </fieldset>
+    </div>
+</div>
+
+<div class="buildings-container col-md-9 col-sm-12">
+    <div class="card buildings" ng-if="vm.properties.length" infinite-scroll="vm.getMoreItems">
+        <ul>
+            <li class="building--card card col-sm-12 col-md-12"
+            ng-repeat="building in vm.properties | filter: vm.filterProperties track by $index">
+                <div class="building--photo">
+                    <div class="building--price">
+                        <span class="building--price-tag">
+                            {{ building.price | currency:'R$ ' }}
+                        </span>
+                    </div>
+                </div>
+
+                <div class="building--info">
+                    <div class="building--id--wrapper col-md-12">
+                        <span ng-bind="building.id" class="building--id"></span>
+
+                        <button class="building--view mobile">Visualizar anúncio</button>
+                    </div>
+
+                    <div class="mobile col-md-12 building--price-tag_mobile">
+                        {{ building.price | currency:'R$ ' }}
+                    </div>
+
+                    <h1 class="building--title col-md-12 col-xs-12" ng-bind="building.title"></h1>
+
+                    <p class="building--description col-md-12" ng-bind="building.description"></p>
+
+                    <footer class="building--footer col-md-12">
+                        <div class="col-md-8 col-sm-7">
+                            <span class="building--icon-container">
+                                <img src="assets/images/ic-card-area.svg" onerror="this.src='assets/images/ic-card-area.png'"
+                                alt="Ícone área" aria-hidden="true" class="building--icon-area" />
+                                <span class="building--area">{{ building.squareMeters }} <abbr title="metros quadrados">M²</abbr></span>
+                            </span>
+
+                            <span class="building--icon-container">
+                                <img src="assets/images/ic-card-beds.svg" onerror="this.src='assets/images/ic-card-beds.png'"
+                                alt="Ícone cama" aria-hidden="true" class="building--icon-bed" />
+                                <span class="building--beds">{{ building.beds }} quartos</span>
+                            </span>
+
+                            <span class="building--icon-container">
+                                <img src="assets/images/ic-card-bathroom.svg" onerror="this.src='assets/images/ic-card-bathroom.png'"
+                                alt="Ícone banheiro" aria-hidden="true" class="building--icon-bathroom" />
+                                <span class="building--baths">{{ building.baths }} banheiros</span>
+                            </span>
+                        </div>
+
+                        <div class="col-md-4 col-sm-5">
+                            <button class="building--view">Visualizar anúncio</button>
+                        </div>
+                    </footer>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>

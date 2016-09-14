@@ -1,0 +1,32 @@
+.menu {
+  height: calc(100% - 72px);
+  width: 125px;
+  display: block;
+  float: left;
+  padding: 1em .5em;
+
+  background: #094e6e;
+  text-transform: uppercase;
+}
+
+.menu--link {
+  height: 7em;
+  display: block;
+  margin: 0.5em;
+  padding-top: 1em;
+
+  color: #fff;
+  border-radius: 4px;
+  font-size: 0.8em;
+  font-weight: bold;
+  text-align: center;
+}
+
+.menu--link__selected {
+  background-color: #00acff;
+}
+
+.menu--title {
+  display: block;
+  line-height: 2em;
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <title>Spotippos</title>
+
+    <meta name="viewport" content="width=device-width" />
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body ng-app="spotippos">
+    <header class="header">
+        <span class="header__logo">
+            <img class="header__logo--image" src="assets/images/logo-vivareal.svg" onerror="this.src='assets/images/logo-vivareal.png'"
+            alt="Logo Spotippos" aria-hidden="true" />
+        </span>
+
+        <h1 class="header__title">Spotippos - Anúncios</h1>
+    </header>
+
+    <sidebar class="menu">
+        <nav>
+            <ul>
+                <li>
+                    <a class="menu--link menu--link__selected" href="#">
+                        <img class="menu--icon" src="assets/images/building.svg" onerror="this.src='assets/images/building.png'"
+                        alt="Ícone prédio" aria-hidden="true" />
+                        <span class="menu--title">Anúncios</span>
+                    </a>
+                </li>
+
+                <a class="menu--link" href="#">
+                    <img class="menu--icon" src="assets/images/plus-icon.svg" onerror="this.src='assets/images/building.png'"
+                    alt="Ícone adicionar" aria-hidden="true" />
+                    <span class="menu--title">Novo Anúncio</span>
+                </a>
+            </ul>
+        </nav>
+    </sidebar>
+
+    <main ng-view>
+    </main>
+
+    <script src="js/app_prod.js"></script>
+</body>
+</html>

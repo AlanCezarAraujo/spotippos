@@ -1,0 +1,29 @@
+.header {
+  background-color: var(--water-blue);
+  color: var(--white-four);
+  text-transform: uppercase;
+}
+
+.header__logo {
+  display: block;
+  width: 124px;
+  background: #00acff;
+  text-align: center;
+  height: 72px;
+  float: left;
+}
+
+.header__logo--image {
+  height: 45px;
+  margin-top: 12px;
+}
+
+.header__title {
+  display: inline-block;
+  line-height: 3em;
+  padding-left:  1em;
+  font-size: 24px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: condensed;
+}

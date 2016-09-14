@@ -1,0 +1,5 @@
+node_modules/
+.nyc_output/
+coverage/
+src/js/app_prod.js
+src/assets/css/style.css

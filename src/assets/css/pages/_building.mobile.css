@@ -1,0 +1,70 @@
+.mobile {
+  display: none;
+}
+
+@media (max-width: 1200px) {
+  .filter-container,
+  .buildings-container {
+    width: 100%;
+  }
+
+  .filter-container {
+    max-height: 380px;
+    margin-bottom: 2em;
+  }
+
+  .buildings-container {
+    height: calc( 100vh - 5em);
+    margin-bottom: 2em;
+  }
+
+  .menu {
+    position: absolute;
+    left: -150px;
+  }
+
+  main {
+    margin-left: 0;
+    width: 100%;
+  }
+}
+
+@media (max-width: 780px) {
+  .mobile {
+    display: initial;
+  }
+
+  .filter-container,
+  .buildings-container {
+    padding: 0;
+  }
+
+  .header__logo {
+    width: 80px;
+  }
+
+  .header__title {
+    font-size: 1.15em;
+    padding: 9px;
+  }
+
+  .building--id--wrapper {
+    margin-bottom: 1em;
+  }
+
+  .building--price-tag_mobile {
+    line-height: 2;
+    font-size: 1.4em;
+    color: var(--twilight-blue);
+  }
+
+  .building--photo,
+  .building--view:not(.mobile) {
+    display: none;
+  }
+
+  .building--info {
+    margin: 0;
+    width: 100%;
+  }
+}

@@ -1,0 +1,34 @@
+:root {
+
+  /**
+   * COLORS
+   */
+  --white-three: #fafafa;
+  --warm-grey: #999999;
+  --brownish-grey: #666666;
+  --warm-grey-two: #979797;
+  --warm-grey-three: #878787;
+  --black-30: rgba(20, 13, 13, 0.3);
+  --twilight-blue: #094e6e;
+  --white-four: #ffffff;
+  --pinkish-grey: #cccccc;
+  --black-70: rgba(0, 0, 0, 0.7);
+  --black-0: rgba(0, 0, 0, 0);
+  --white-five: #f9f9f9;
+  --white-two: #e5e5e5;
+  --white: #e0e0e0;
+  --azure: #00acff;
+  --water-blue: #1190cd;
+  --white-six: #f1f1f1;
+  --greyish-brown: #444444;
+
+  /**
+   * BOX MODEL
+   */
+  --main-heigth: calc(100% - 72px);
+
+  /**
+   * MISC
+   */
+  --card-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.12);
+}

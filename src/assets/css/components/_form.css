@@ -1,0 +1,37 @@
+.label {
+  color: var(--warm-grey);
+  text-transform: uppercase;
+  font-size: .8em;
+}
+
+.label__hidden {
+  visibility: hidden;
+  font-size: .000000001em;
+}
+
+.text {
+  padding: .8em .5em;
+  width: 100%;
+  margin: .5em 0 1.5em;
+
+  border: solid 1px var(--warm-grey-two);
+  font-size: 1em;
+  border-radius: 4px;
+  text-transform: uppercase;
+}
+
+.text::placeholder {
+  text-transform: uppercase;
+}
+
+hr {
+  width: calc(100% + 32px);
+  margin-left: -16px;
+
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 0;
+}
+
+legend {
+  margin-bottom: 1em;
+}

@@ -1,0 +1,110 @@
+.buildings {
+  background: var(--white-four);
+  overflow: auto;
+}
+
+.building--card {
+  margin: 1em 0;
+  padding: 0;
+  position: relative;
+
+  background-color: var(--white-four);
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.26);
+}
+
+.building--photo {
+  height: 100%;
+  width: 30%;
+}
+
+.building--info {
+  height: 100%;
+  margin-left: 30%;
+  width: 70%;
+}
+
+.building--price {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 30%;
+  left: 0;
+  font-size: 1.3em;
+
+  color: var(--white-four);
+  font-weight: bold;
+  background-image: linear-gradient(to top, var(--black-70), var(--black-30) 32%, var(--black-0));
+}
+
+.building--price-tag {
+  position: absolute;
+  bottom: 1em;
+  left: .5em;
+}
+
+.building--id {
+  padding: .2em;
+  border: solid 1px var(--white-two);
+  border-radius: 2px;
+
+  color: var(--warm-grey-three);
+  font-size: .8em;
+  text-transform: uppercase;
+  background-color: var(--white-four);
+  font-weight: bold;
+}
+
+.building--id--wrapper {
+  padding: 1em 1em .5em;
+  height: auto;
+}
+
+.building--title {
+  margin: .5em 0;
+  font-size: 1.3em;
+
+  color: var(--greyish-brown);
+}
+
+.building--description {
+  margin-bottom: 1em;
+  color: var(--warm-grey);
+  line-height: 1.5;
+}
+
+.building--icon-container {
+  padding: 0 .3em;
+  text-align: center;
+  display: inline-block;
+}
+
+.building--area,
+.building--beds,
+.building--baths {
+  display: block;
+  margin-top: .5em;
+  font-weight: bold;
+  font-size: .8em;
+
+  color: var(--warm-grey);
+  text-transform: uppercase;
+}
+
+.building--footer {
+  padding: .5em 0;
+  background-color: var(--white-three);
+  box-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.1);
+}
+
+.building--view {
+  padding: .8em .5em;
+  float: right;
+  background-color: var(--azure);
+  color: var(--white-four);
+  border-radius: 2px;
+  border: 0;
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.12);
+}
