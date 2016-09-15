@@ -1,5 +1,6 @@
 node_modules/
 .nyc_output/
 coverage/
-src/js/app_prod.js
+src/js/app.bundle.js
+src/js/app.min.js
 src/assets/css/style.css

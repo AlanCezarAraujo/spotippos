@@ -5,7 +5,7 @@ module.exports = function (grunt) {
     grunt.config('browserify', {
         dist: {
             files: {
-                'src/js/app_prod.js': ['src/js/app.js'],
+                'src/js/app.bundle.js': ['src/js/app.js'],
             },
             options: {
                 transform: ['babelify'],

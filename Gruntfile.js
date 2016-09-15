@@ -6,4 +6,5 @@ module.exports = function (grunt) {
 
     grunt.registerTask('codeStyle', ['jscs', 'jshint']);
     grunt.registerTask('default', ['connect', 'browserify', 'postcss', 'watch']);
+    grunt.registerTask('build', ['browserify', 'postcss', 'ngAnnotate', 'uglify']);
 };

@@ -17,3 +17,7 @@ Após rodar os testes, você pode gerar um relatório de cobertura de testes com
 ## Qualidade de Código
 
 Para verificar alguns débitos técnicos, execute `grunt codeStyle` no terminal.
+
+## Processo de build
+
+Para criar um build para aplicação, execute o comando `npm run build` e será gerado o arquivo `app.min.js` e `style.css`.
