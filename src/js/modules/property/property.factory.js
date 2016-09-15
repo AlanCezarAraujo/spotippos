@@ -1,26 +1,31 @@
 'use strict';
 
 let $http;
-let remoteProperties = [];
 let propertiesLength = 0;
+let propertyFactoryScope;
 
 class PropertyFactory {
     constructor(_$http_) {
         $http = _$http_;
 
+        propertyFactoryScope = this;
+
         this.properties = [];
+        this.cachedProperties = [];
     }
 
     listAllProperties() {
+        const successCallback = this._setProperties;
+
         $http
             .get('http://spotippos.vivareal.com/properties?ax=1&ay=1&bx=1400&by=100')
-            .success((data) => {
-                remoteProperties = data.properties;
+            .success(propertyFactoryScope._setProperties);
+    }
 
-                for (let i = 30; i > 0; i--) {
-                    this.properties.push(remoteProperties[i]);
-                }
-            });
+    _setProperties(data) {
+        propertyFactoryScope.cachedProperties = data.properties;
+
+        propertyFactoryScope.getMoreProperties();
     }
 
     /**
@@ -28,7 +33,7 @@ class PropertyFactory {
      */
     getMoreProperties() {
         for (let index = 30; index > 0; index--) {
-            this.properties.push( remoteProperties[propertiesLength++] );
+            this.properties.push( this.cachedProperties[propertiesLength++] );
         }
     }
 
