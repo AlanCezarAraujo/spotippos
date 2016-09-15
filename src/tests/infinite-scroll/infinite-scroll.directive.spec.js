@@ -1,3 +1,5 @@
+'use strict';
+
 import chai from 'chai';
 import { expect } from 'chai';
 import spies from 'chai-spies';

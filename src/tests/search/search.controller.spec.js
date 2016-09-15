@@ -16,7 +16,6 @@ const PropertyFactory = {
 
 
 const listAllProperties = chai.spy.on(PropertyFactory, 'listAllProperties');
-const getMoreProperties = chai.spy.on(PropertyFactory, 'getMoreProperties');
 
 
 var controller = new SearchController(PropertyFactory);

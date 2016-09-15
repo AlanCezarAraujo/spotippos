@@ -15,8 +15,6 @@ class PropertyFactory {
     }
 
     listAllProperties() {
-        const successCallback = this._setProperties;
-
         $http
             .get('http://spotippos.vivareal.com/properties?ax=1&ay=1&bx=1400&by=100')
             .success(propertyFactoryScope._setProperties);

@@ -1,3 +1,5 @@
+'use strict';
+
 import chai from 'chai';
 import { expect } from 'chai';
 import spies from 'chai-spies';
@@ -9,8 +11,8 @@ chai.should();
 var $http = {
     get: () => {
         return {
-            success: () => {}
-        }
+            success: () => { }
+        };
     }
 };
 
